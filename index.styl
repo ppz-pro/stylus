@@ -1,0 +1,33 @@
+$red = #fa5150
+$yellow = #ffc400
+$green = #07c060
+$blue = #10aefe
+$blue2 = #1485ee
+
+$font-color = var(--font-color, black)
+$font-color-light = var(--font-color-light, white)
+$link-color = var(--link-color, #1a0dab)
+
+black(opacity)
+  rgba(0, 0, 0, opacity)
+white(opacity)
+  rgba(255, 255, 255, opacity)
+
+shadow(size = 10px, color = black(.3))
+  box-shadow: 0 0 size color
+position(type, top = 0, right = 0, bottom = top, left = right)
+  position: type
+  top: top
+  bottom: bottom
+  right: right
+  left: left
+
+fixed(top = 0, right = 0, bottom = top, left = right)
+  position(fixed, top, right, bottom, left)
+absolute(top = 0, right = 0, bottom = top, left = right)
+  position(absolute, top, right, bottom, left)
+
+flex-center()
+  display: flex
+  align-items: center
+  justify-content: center

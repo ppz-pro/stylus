@@ -1,0 +1,16 @@
+{
+  "name": "@ppzp/stylus",
+  "version": "0.0.0",
+  "description": "stylus 变量、mixin",
+  "main": "index.styl",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ppz-pro/stylus.git"
+  },
+  "author": "gy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ppz-pro/stylus/issues"
+  },
+  "homepage": "https://github.com/ppz-pro/stylus#readme"
+}
