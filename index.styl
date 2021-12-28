@@ -1,32 +1,50 @@
-$red = #fa5150
-$yellow = #ffc400
-$green = #07c060
-$blue = #10aefe
-$blue2 = #1485ee
+// === 颜色 ===
+// 使用 css 变量的优点在于，可以在运行时改变样式
+$primary-hue = var(--primary-hue, 219)
+$primary-saturation = var(--primary-saturation, 88.8%)
+$primary-lightness = var(--primary-lightness, 58.8%)
+primary(h = $primary-hue, s = $primary-saturation, l = $primary-lightness, a = 1)
+  'hsla(%s %s %s / %s)' % (h s l a)
 
-$font-color = var(--font-color, black)
-$font-color-light = var(--font-color-light, white)
-$link-color = var(--link-color, #1a0dab)
+$danger-hue = var(--danger-hue, 5)
+$danger-saturation = var(--danger-saturation, 88.8%)
+$danger-lightness = var(--danger-lightness, 58.8%)
+danger(h = $danger-hue, s = $danger-saturation, l = $danger-lightness, a = 1)
+  'hsla(%s %s %s / %s)' % (h s l a)
 
-black(opacity)
-  rgba(0, 0, 0, opacity)
-white(opacity)
-  rgba(255, 255, 255, opacity)
+$text-hue = var(--text-hue, 0) // 文字颜色
+$text-saturation = var(--text-saturation, 100%)
+$text-lightness = var(--text-lightness, 0%)
+text(h = $text-hue, s = $text-saturation, l = $text-lightness, a = 1)
+  'hsla(%s %s %s / %s)' % (h s l a)
 
-shadow(size = 10px, color = black(.3))
-  box-shadow: 0 0 size color
+$n-text-hue = var(--n-text-hue, 0) // 反转文字颜色
+$n-text-saturation = var(--n-text-saturation, 100%)
+$n-text-lightness = var(--n-text-lightness, 100%)
+n-text(h = $n-text-hue, s = $n-text-saturation, l = $n-text-lightness, a = 1)
+  'hsla(%s %s %s / %s)' % (h s l a)
+
+// === 边框 ===
+textBorder(a = .1)
+  return solid 1px text(a: a)
+nTextBorder(a = .1)
+  return solid 1px n-text(a: a)
+
+// === 定位 ===
 position(type, top = 0, right = 0, bottom = top, left = right)
   position: type
   top: top
   bottom: bottom
   right: right
   left: left
-
 fixed(top = 0, right = 0, bottom = top, left = right)
   position(fixed, top, right, bottom, left)
 absolute(top = 0, right = 0, bottom = top, left = right)
   position(absolute, top, right, bottom, left)
 
+// === 其他 ===
+shadow(size = 10px, color = text(a: .06))
+  box-shadow: 0 0 size color
 flex-center()
   display: flex
   align-items: center
