@@ -2,7 +2,10 @@
   "name": "@ppzp/stylus",
   "version": "0.0.1",
   "description": "stylus 变量、mixin",
-  "files": ["index.styl"],
+  "main": "index.styl",
+  "files": [
+    "index.styl"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ppz-pro/stylus.git"
@@ -12,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ppz-pro/stylus/issues"
   },
-  "homepage": "https://github.com/ppz-pro/stylus#readme"
+  "homepage": "https://github.com/ppz-pro/stylus#readme",
+  "devDependencies": {
+    "stylus": "^0.56.0"
+  }
 }

@@ -31,15 +31,15 @@ nTextBorder(a = .1)
   return solid 1px n-text(a: a)
 
 // === 定位 ===
-position(type, top = 0, right = 0, bottom = top, left = right)
+position(type, top, right, bottom, left)
   position: type
   top: top
   bottom: bottom
   right: right
   left: left
-fixed(top = 0, right = 0, bottom = top, left = right)
+fixed(top = auto, right = auto, bottom = auto, left = auto)
   position(fixed, top, right, bottom, left)
-absolute(top = 0, right = 0, bottom = top, left = right)
+absolute(top = auto, right = auto, bottom = auto, left = auto)
   position(absolute, top, right, bottom, left)
 
 // === 其他 ===
